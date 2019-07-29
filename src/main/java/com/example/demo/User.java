@@ -2,9 +2,13 @@ package com.example.demo;
 
 import java.util.Date;
 
+import javax.validation.constraints.Size;
+
 public class User {
 
 	private Integer id;
+	
+	@Size(min = 2, message = "Name should have atlest 2 characters")
 	private String name;
 
 	public User() {
